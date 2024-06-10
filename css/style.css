@@ -1,9 +1,14 @@
+/* esto es para subir a github :D 
+1) git add . 
+2) git commit -m "nombre"
+3) git push -u origin main
+*/
 :root{
   --Amarillo :#DCF256;
   --Celeste:#74C3EF;
   --Fondo-remeras:#ECECDE;
 }
-
+/*Universales*/
 html {
 box-sizing: border-box;
 font-size: 62.5%;
@@ -26,7 +31,7 @@ font-size: 16px;
   box-sizing: inherit;
 }
 p{
-font-size: 2rem;
+  font-size: 2rem;
 }
 ul{
   text-decoration: none;
@@ -34,9 +39,8 @@ ul{
   display:flex;
   gap: 13rem;
 }
-.navbar li a{
-  font-size: 2rem;
-
+.classic, .exclusive{
+text-align: right;
 }
 /* Logo*/
 .logo{
@@ -53,6 +57,9 @@ justify-content: center;
 gap: 1rem;
 width: 100%;
 }
+.navbar li a{
+  font-size: 2rem;
+}
 .navbar__enlace{
 text-decoration: none;
 font-size: 2rem;
@@ -61,13 +68,13 @@ display: flex;
 justify-content: space-between;
 flex-direction: column;
 }
-
 .navbar__enlace:hover{
 cursor: pointer;
 background-color: white;
 }
 /* bloque de remeras*/
 .contenedor{
+max-width: 140rem;
 display: grid;
 grid-template-columns: repeat(3,33%); 
 grid-template-rows: 500px 600px;
@@ -76,8 +83,6 @@ margin: 1rem;
 padding: 3rem;
 align-items: center;
 }
-
-
 .remera {
 background-color: #ECECDE;
 align-items: center;
@@ -90,60 +95,33 @@ text-align: center;
 width: 19rem;
 height:19rem;
 }
-.image{
-width: 100%;
-height: 26rem;
-border-radius: 5%;
-}
-
 h2{
-text-align: center;
+  text-align: center;
 }
 
-
-.redes {
-/*display: flex;*/
-background-color: #74C3EF;
-}
-.barnav{
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  
-}
-
+/*Carrito*/
 .tienda{
 text-align: center;
 align-items: center;
 }
+.tienda div{
+  display: flex;
+  gap: 3rem;
+  text-align: center;
+  padding-left: 50rem;
+}
 .boton{
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-width: 35rem;
-height: 35rem;
+width: 3rem;
+height: 5rem;
 border-radius: 0.5rem;
 background-color: #74C3EF;
 text-decoration:none;
-gap:1px;
+text-align: center;
 }
 .boton:hover{
 cursor:pointer;
 background-color:var(--Amarillo);
 }
-.iconos{
-width: 50px;
-height: 50px;
-gap: 1rem;
-}
-footer , .login{
-text-align: center;
-}
-
-.classic, .exclusive{
-text-align: right;
-}
-
 /*Sobre nosotros*/
 .contenido{
 width: 50%;
@@ -151,7 +129,21 @@ margin: auto;
 background-color: rgba(20, 20, 20, 0 .644);
 backdrop-filter: blur(9px);
 }
+.login{
+text-align: center;
+}
+/*barra de navegacion del index*/
+.barnav{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
 /*Gift Cards*/
+.image{
+width: 100%;
+height: 26rem;
+border-radius: 5%;
+}
 .card-1{
   display: flex;
   justify-content: space-evenly;
@@ -186,8 +178,6 @@ backdrop-filter: blur(9px);
   top: 2;
   bottom: 3%;  
 }
-
-
 .card2{
 display: flex;
 justify-content: space-evenly;
@@ -250,7 +240,45 @@ gap: 3rem;
   top: 2;
   bottom: 3%; 
 }
-
+/*Footer*/
+ .footer{
+  background-color: #74C3EF;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+ }
+  .iconos{
+  width: 50px;
+  height: 50px;
+  gap: 1rem;
+  }
+ .like{
+  text-align: center;
+ }
+  .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:1rem;
+  width: 8rem;
+  height: 8rem;
+  }
+  .texto_redes{
+    text-align:left;
+    padding-top: 2rem;
+  }
+  .div-1{
+    display:flex;
+    gap:5rem;
+    padding-left: 2rem;
+    text-decoration: none;
+  }
+    .div-2{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-left: 63rem;
+}
 @media (max-width:2560px ){/* 4K*/
 
 }
@@ -303,26 +331,22 @@ gap: 3rem;
     text-align:center;
     align-items:center;
   }
+    .tienda div{
+      display: flex;
+      gap: 3rem;
+      text-align: center;
+      padding-left: 50rem;
+    }
   
     .boton{
-    display: flex;
-    flex-direction: row;
     height: 2rem;
-    width:25rem;
+    width:20rem;
     border-radius:10%;
     background-color:#74C3EF;
     text-decoration:none;
     gap: 3rem;
+    text-align: center;
   }
-    .boton li a{
-      font-size: 2rem;
-      text-decoration: none;
-    }
-    .boton ul{
-      gap: 15rem;
-      text-decoration: none;
-    }
-  
     .iconos{
     width:5rem;
     height:5rem;
@@ -390,7 +414,7 @@ gap: 3rem;
     height:35rem;
     position:absolute;
     left:42%;
-    top:65%;
+    top:59%;
   }
     .valor-2{
     width:22rem;
@@ -419,7 +443,7 @@ gap: 3rem;
     height:35rem;
     position:absolute;
     left:43%;
-    top:102%;
+    top:98%;
   }
     .valor-3{
     width:22rem;
@@ -430,6 +454,32 @@ gap: 3rem;
     top:65%;
     bottom:1%;
   }	
+    .div-1{
+    display:flex;
+    gap:5rem;
+    padding-left: 2rem;
+    text-decoration: none;
+    padding-top: 10rem;
+  }
+    .div-2{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-left: 59rem;
+  }
+    .footer{
+    background-color: #74C3EF;
+  }
+    .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    padding:1rem;
+  }
+    .texto_redes{
+    text-align:center;
+    padding-left: 48rem;
+  }
 }
 @media(max-width:1024px){/* Laptop*/}
 
@@ -462,13 +512,6 @@ gap: 3rem;
 @media(max-width: 320px){/*Mobile S*/
 
 }
-
-
-
-
-
-
-
 
 /*medidas de los mq
 4k = 2560 px
