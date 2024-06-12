@@ -75,7 +75,6 @@ background-color: white;
 }
 /* bloque de remeras*/
 .contenedor{
-width: 100%;
 display: grid;
 grid-template-columns: repeat(3,33%); 
 grid-template-rows: 500px 600px;
@@ -106,21 +105,16 @@ h2{
 text-align: center;
 align-items: center;
 }
-.tienda div{
-  display: flex;
-  gap: 16rem;
-  text-align: center;
-  padding-left: 50rem;
-}
 .boton{
-width: 19rem;
-height: 2rem;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 35rem;
+height: 35rem;
 border-radius: 0.5rem;
 background-color: #74C3EF;
 text-decoration:none;
-text-align: center;
-font-size: 1.6rem;
-
+gap:1px;
 }
 .boton:hover{
 cursor:pointer;
@@ -132,18 +126,6 @@ width: 50%;
 margin: auto;
 background-color: rgba(20, 20, 20, 0 .644);
 backdrop-filter: blur(9px);
-}
-.login{
-text-align: center;
-}
-/*barra de navegacion del index*/
-.barnav{
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-}
-.barnav ul{
-  gap: 110rem;
 }
 /*Gift Cards*/
 .image{
@@ -247,60 +229,12 @@ gap: 3rem;
   top: 2;
   bottom: 3%; 
 }
-/*Footer*/
- .footer{
-  background-color: #74C3EF;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
- }
-  .iconos{
-  width: 50px;
-  height: 50px;
-  gap: 1rem;
-  }
- .like{
-  text-align: center;
- }
-  .redes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding:1rem;
-  width: 8rem;
-  height: 8rem;
-  }
-  .texto_redes{
-    text-align:left;
-    padding-top: 2rem;
-    padding-left: 1rem;
-  }
-  .div-1{
-    display:flex;
-    gap:5rem;
-    padding-left: 2rem;
-    text-decoration: none;
-  }
-    .div-2{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    padding-left: 63rem;
-}
-  footer div{
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    padding-left: 58rem;
-}
 
-        /* 4K*/
-@media (max-width:2560px ){
+@media (max-width:2560px ){/* 4K*/
 
 }
-      /* Monitor*/
-@media(max-width: 1920px){
-  .navbar{
+@media(max-width:1440px){/*Laptop L*/
+    .navbar{
     font-size: 1rem;
   }
   .navbar li a{
@@ -568,8 +502,16 @@ gap: 3rem;
     background-color:#74C3EF;
     text-decoration:none;
     gap: 3rem;
-    text-align: center;
   }
+    .boton li a{
+      font-size: 2rem;
+      text-decoration: none;
+    }
+    .boton ul{
+      gap: 15rem;
+      text-decoration: none;
+    }
+  
     .iconos{
     width:5rem;
     height:5rem;
@@ -677,222 +619,16 @@ gap: 3rem;
     top:65%;
     bottom:1%;
   }	
-    .div-1{
-    display:flex;
-    gap:5rem;
-    padding-left: 2rem;
-    text-decoration: none;
-    padding-top: 10rem;
-  }
-    .div-2{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    padding-left: 59rem;
-  }
-    .footer{
-    background-color: #74C3EF;
-  }
-    .redes {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    padding:1rem;
-  }
-    .texto_redes{
-    text-align:center;
-    padding-left: 48rem;
-  }
 }
-}
+@media(max-width:1024px){/* Laptop*/}
 
 
-       /*Laptop L*/
 
 
-       /* Laptop*/
-@media(max-width:1024px){
-  .navbar{
-    font-size: 1rem;
-  }
-  .navbar li a{
-    font-size: 3rem; 
-  }
-    .contenedor{
-    display: grid;
-    grid-template-columns:repeat(3, 33%);
-    grid-template-rows:540px 580px;
+@media (max-width: 768px ){ /* Tablet*/   
+  .contenedor{
+    grid-template-columns: repeat(3,30%);
     gap: 1rem;
-    padding:0rem;
-    margin:0rem;
-    align-items:center;
-  }
-    .imagenes{
-      padding-left: 4rem;
-    }
-    .remera{
-    background-color:#ECECDE;
-    align-items:center;
-  }
-    .fotos{
-    width:35rem;
-    height:35rem;
-  }
-    .image{
-    width:45rem;
-    height: 25rem;
-    border-radius:8%;
-    gap:1rem;
-  }
-    .barnav{
-    display:flex;
-    flex-direction:row;
-    gap: 2rem;
-  }
-    .barnav li a{
-      font-size: 2.4rem;
-    }
-    .barnav ul{
-      gap: 105rem;
-    }
-  
-    .tienda{
-    text-align:center;
-    align-items:center;
-  }
-    .tienda div{
-      display: flex;
-      gap: 3rem;
-      text-align: center;
-      padding-left: 50rem;
-    }
-  
-    .boton{
-    height: 2rem;
-    width:20rem;
-    border-radius:10%;
-    background-color:#74C3EF;
-    text-decoration:none;
-    gap: 3rem;
-    text-align: center;
-  }
-    .iconos{
-    width:5rem;
-    height:5rem;
-    gap:5rem;
-  }
-    .card-1{
-    display:flex;
-    justify-content:space-evenly;
-    gap:2rem;
-    padding-bottom: 3rem;
-  }
-  
-    .classic{
-    text-align:center;
-    width:40rem;
-    height:25rem;
-    background-color:#DCF256;
-    border-radius:10%;
-    position:relative;
-  }
-    .classic p{
-    font-size:3rem;
-    text-align: center;
-  }
-    .flecha{
-    width:20rem;
-    height:35rem;
-    position:absolute;
-    left:45%;
-    bottom:1%;
-    top:25%;
-  }
-    .valor{
-    width:22rem;
-    height:4rem;
-    background-color:#ECECDE;
-    position: absolute;
-    left:22.5%;
-    top:65%;
-    bottom:1%;
-  }
-  
-    .card2{
-    display:flex;
-    justify-content:space-evenly;
-    gap: 2rem;
-    padding-bottom: 3rem;
-  }
-  
-    .standar{
-    text-align:center;
-    width:42rem;
-    height:25rem;
-    background-color:#A0CBA2;
-    border-radius:10%;
-    position:relative;
-  }
-  
-    .standar p{
-    font-size:3rem;
-    text-align:center;
-  }
-    .flecha-2{
-    width:20rem;
-    height:35rem;
-    position:absolute;
-    left:42%;
-    top:59%;
-  }
-    .valor-2{
-    width:22rem;
-    height:4rem;
-    background-color:#A0CBA2;
-    position:absolute;
-    left:22%;
-    top:65%;
-    bottom:1%;
-  }
-    .exclusive{
-    text-align:center;
-    width:42rem;
-    height:25rem;
-    background-color:#3B73A8;
-    border-radius:10%;
-    position:relative;
-  }
-    .exclusive p{
-    font-size:3rem;
-    text-align:center;
-    color:white;
-  }
-    .flecha-3{
-    width:20rem;
-    height:35rem;
-    position:absolute;
-    left:43%;
-    top:98%;
-  }
-    .valor-3{
-    width:22rem;
-    height:4rem;
-    background-color:#1e1d6e;
-    position:absolute;
-    left:22%;
-    top:65%;
-    bottom:1%;
-  }	
-    .div-1{
-    display:flex;
-    gap:5rem;
-    padding-left: 2rem;
-    text-decoration: none;
-    padding-top: 10rem;
-  }
-    .div-2{
-    display: flex;
-    gap: 2rem;
     align-items: center;
     padding-left: 59rem;
   }
@@ -910,27 +646,22 @@ gap: 3rem;
     padding-left: 48rem;
   }
 }
+@media(max-width: 425px){/* Mobile L*/
 
+}
+@media(max-width: 375px){/*Mobile M*/
 
-      /* Tablet*/
-@media (max-width: 768px ){    
+}
+@media(max-width: 320px){/*Mobile S*/
 
 }
 
-      /* Mobile L*/
-@media(max-width: 425px){
 
-}
 
-      /*Mobile M*/
-@media(max-width: 375px){
 
-}
 
-     /*Mobile S*/
-@media(max-width: 320px){
 
-}
+
 
 /*medidas de los mq
 4k = 2560 px
@@ -939,4 +670,4 @@ Laptop = 1024 px
 Tablet = 768 px 
 Movil L = 425 px 
 Mobile M = 375 px 
-Mobile S = 320 px */
+Mobile S = 320 px*/
