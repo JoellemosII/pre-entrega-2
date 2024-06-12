@@ -1,9 +1,14 @@
+/* esto es para subir a github :D 
+1) git add . 
+2) git commit -m "nombre"
+3) git push -u origin main
+*/
 :root{
   --Amarillo :#DCF256;
   --Celeste:#74C3EF;
   --Fondo-remeras:#ECECDE;
 }
-
+/*Universales*/
 html {
 box-sizing: border-box;
 font-size: 62.5%;
@@ -20,13 +25,14 @@ background-attachment: fixed;
 }
 body{
 font-size: 16px;
+margin: 0;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 p{
-font-size: 2rem;
+  font-size: 2rem;
 }
 ul{
   text-decoration: none;
@@ -34,9 +40,8 @@ ul{
   display:flex;
   gap: 13rem;
 }
-.navbar li a{
-  font-size: 2rem;
-
+.classic, .exclusive{
+text-align: right;
 }
 /* Logo*/
 .logo{
@@ -53,6 +58,9 @@ justify-content: center;
 gap: 1rem;
 width: 100%;
 }
+.navbar li a{
+  font-size: 2rem;
+}
 .navbar__enlace{
 text-decoration: none;
 font-size: 2rem;
@@ -61,26 +69,25 @@ display: flex;
 justify-content: space-between;
 flex-direction: column;
 }
-
 .navbar__enlace:hover{
 cursor: pointer;
 background-color: white;
 }
 /* bloque de remeras*/
 .contenedor{
+width: 100%;
 display: grid;
 grid-template-columns: repeat(3,33%); 
 grid-template-rows: 500px 600px;
 gap: 1rem;
 margin: 1rem;
-padding: 3rem;
+padding: 2rem;
 align-items: center;
 }
-
-
 .remera {
 background-color: #ECECDE;
 align-items: center;
+margin-left: 4rem;
 padding: 1rem;
 }
 .text{
@@ -90,60 +97,35 @@ text-align: center;
 width: 19rem;
 height:19rem;
 }
-.image{
-width: 100%;
-height: 26rem;
-border-radius: 5%;
-}
-
 h2{
-text-align: center;
+  text-align: center;
 }
 
-
-.redes {
-/*display: flex;*/
-background-color: #74C3EF;
-}
-.barnav{
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  
-}
-
+/*Carrito*/
 .tienda{
 text-align: center;
 align-items: center;
 }
+.tienda div{
+  display: flex;
+  gap: 16rem;
+  text-align: center;
+  padding-left: 50rem;
+}
 .boton{
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-width: 35rem;
-height: 35rem;
+width: 19rem;
+height: 2rem;
 border-radius: 0.5rem;
 background-color: #74C3EF;
 text-decoration:none;
-gap:1px;
+text-align: center;
+font-size: 1.6rem;
+
 }
 .boton:hover{
 cursor:pointer;
 background-color:var(--Amarillo);
 }
-.iconos{
-width: 50px;
-height: 50px;
-gap: 1rem;
-}
-footer , .login{
-text-align: center;
-}
-
-.classic, .exclusive{
-text-align: right;
-}
-
 /*Sobre nosotros*/
 .contenido{
 width: 50%;
@@ -151,7 +133,24 @@ margin: auto;
 background-color: rgba(20, 20, 20, 0 .644);
 backdrop-filter: blur(9px);
 }
+.login{
+text-align: center;
+}
+/*barra de navegacion del index*/
+.barnav{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.barnav ul{
+  gap: 110rem;
+}
 /*Gift Cards*/
+.image{
+width: 100%;
+height: 26rem;
+border-radius: 5%;
+}
 .card-1{
   display: flex;
   justify-content: space-evenly;
@@ -186,8 +185,6 @@ backdrop-filter: blur(9px);
   top: 2;
   bottom: 3%;  
 }
-
-
 .card2{
 display: flex;
 justify-content: space-evenly;
@@ -250,13 +247,267 @@ gap: 3rem;
   top: 2;
   bottom: 3%; 
 }
+/*Footer*/
+ .footer{
+  background-color: #74C3EF;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+ }
+  .iconos{
+  width: 50px;
+  height: 50px;
+  gap: 1rem;
+  }
+ .like{
+  text-align: center;
+ }
+  .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:1rem;
+  width: 8rem;
+  height: 8rem;
+  }
+  .texto_redes{
+    text-align:left;
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+  .div-1{
+    display:flex;
+    gap:5rem;
+    padding-left: 2rem;
+    text-decoration: none;
+  }
+    .div-2{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-left: 63rem;
+}
+  footer div{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 58rem;
+}
 
-@media (max-width:2560px ){/* 4K*/
+        /* 4K*/
+@media (max-width:2560px ){
 
 }
-@media(max-width:1440px){/*Laptop L*/
-    .navbar{
+      /* Monitor*/
+@media(max-width: 1920px){
+  .navbar{
     font-size: 1rem;
+  }
+  .navbar li a{
+    font-size: 3rem; 
+  }
+    .contenedor{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:580px 600px;
+    gap: 1rem;
+    align-items:center;
+    width: 100%;
+  }
+    .imagenes{
+      padding-left: 10rem;
+    }
+    .remera{
+    background-color:#ECECDE;
+    align-items:center;
+  }
+    .fotos{/*bolsa*/
+    width:35rem;
+    height:35rem;
+  }
+    .image{/* gift*/
+    width:62rem;
+    height: 45rem;
+    border-radius:8%;
+    gap:1rem;
+  }
+    .barnav{
+    display:flex;
+    flex-direction:row;
+    gap: 4rem;
+  }
+    .barnav li a{
+      font-size: 2.4rem;
+    }
+    .barnav ul{
+      gap: 152rem;
+    }
+  
+    .tienda{/*carrito */
+    text-align:center;
+    align-items:center;
+  }
+    .tienda div{
+      display: flex;
+      gap: 18rem;
+      text-align: center;
+      padding-left: 54rem;
+    }
+  
+    .boton{
+    height: 4rem;
+    width:29rem;
+    border-radius:10%;
+    background-color:#74C3EF;
+    text-decoration:none;
+    gap: 18rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+    .iconos{
+    width:5rem;
+    height:5rem;
+    gap:8rem;
+  }
+    .card-1{
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    gap:2rem;
+    padding-bottom: 3rem;
+  }
+  
+    .classic{
+    text-align:center;
+    width:60rem;
+    height:35rem;
+    background-color:#DCF256;
+    border-radius:10%;
+    position:relative;
+  }
+    .classic p{
+    font-size:3.5rem;
+    text-align: center;
+  }
+    .flecha{
+    width:22em;
+    height:35rem;
+    position:absolute;
+    left:41.5%;
+    bottom:1%;
+    top:35%;
+  }
+    .valor{
+    width:30rem;
+    height:5rem;
+    background-color:#ECECDE;
+    position: absolute;
+    left:23.5%;
+    top:65%;
+    bottom:1%;
+  }
+  
+    .card2{
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    gap: 3rem;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
+  
+    .standar{
+    text-align:center;
+    width:60rem;
+    height:35rem;
+    background-color:#A0CBA2;
+    border-radius:10%;
+    position:relative;
+  }
+  
+    .standar p{
+    font-size:4rem;
+    text-align:center;
+  }
+    .flecha-2{
+    width:22em;
+    height:35rem;
+    position:absolute;
+    left:40.8%;
+    top:98%;
+  }
+    .valor-2{
+    width:30rem;
+    height:5rem;
+    background-color:#A0CBA2;
+    position:absolute;
+    left:22%;
+    top:41%;
+    bottom:1%;
+  }
+    .exclusive{
+    text-align:center;
+    width:60rem;
+    height:35rem;
+    background-color:#3B73A8;
+    border-radius:10%;
+    position:relative;
+  }
+    .exclusive p{
+    font-size:3.5rem;
+    text-align:center;
+    color:white;
+  }
+    .flecha-3{
+    width:22em;
+    height:35rem;
+    position:absolute;
+    left:41.5%;
+    top:157%;
+  }
+    .valor-3{
+    width:30rem;
+    height:5rem;
+    background-color:#1e1d6e;
+    position:absolute;
+    left:25%;
+    top:65%;
+    bottom:1%;
+  }	
+    .div-1{
+    display:flex;
+    gap:10rem;
+    padding-left: 4rem;
+    text-decoration: none;
+    padding-top: 10rem;
+  }
+    .div-2{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding-left: 80rem;
+  }
+    .footer{
+    background-color: #74C3EF;
+  }
+    .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    padding:1rem;
+  }
+    .texto_redes{
+    text-align:center;
+      gap: 2rem;
+      padding-left: 1rem;
+}
+  footer, h2,p {
+  font-size: 3rem;
+}
+  @media(max-width:1440px){
+
+    .navbar{
+    font-size: 1.5rem;
   }
   .navbar li a{
     font-size: 3rem; 
@@ -303,26 +554,22 @@ gap: 3rem;
     text-align:center;
     align-items:center;
   }
+    .tienda div{
+      display: flex;
+      gap: 3rem;
+      text-align: center;
+      padding-left: 50rem;
+    }
   
     .boton{
-    display: flex;
-    flex-direction: row;
     height: 2rem;
-    width:25rem;
+    width:20rem;
     border-radius:10%;
     background-color:#74C3EF;
     text-decoration:none;
     gap: 3rem;
+    text-align: center;
   }
-    .boton li a{
-      font-size: 2rem;
-      text-decoration: none;
-    }
-    .boton ul{
-      gap: 15rem;
-      text-decoration: none;
-    }
-  
     .iconos{
     width:5rem;
     height:5rem;
@@ -390,7 +637,7 @@ gap: 3rem;
     height:35rem;
     position:absolute;
     left:42%;
-    top:65%;
+    top:59%;
   }
     .valor-2{
     width:22rem;
@@ -419,7 +666,7 @@ gap: 3rem;
     height:35rem;
     position:absolute;
     left:43%;
-    top:102%;
+    top:98%;
   }
     .valor-3{
     width:22rem;
@@ -430,45 +677,260 @@ gap: 3rem;
     top:65%;
     bottom:1%;
   }	
+    .div-1{
+    display:flex;
+    gap:5rem;
+    padding-left: 2rem;
+    text-decoration: none;
+    padding-top: 10rem;
+  }
+    .div-2{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-left: 59rem;
+  }
+    .footer{
+    background-color: #74C3EF;
+  }
+    .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    padding:1rem;
+  }
+    .texto_redes{
+    text-align:center;
+    padding-left: 48rem;
+  }
 }
-@media(max-width:1024px){/* Laptop*/}
+}
 
 
+       /*Laptop L*/
 
 
-@media (max-width: 768px ){ /* Tablet*/   
-  .contenedor{
-    grid-template-columns: repeat(3,30%);
+       /* Laptop*/
+@media(max-width:1024px){
+  .navbar{
+    font-size: 1rem;
+  }
+  .navbar li a{
+    font-size: 3rem; 
+  }
+    .contenedor{
+    display: grid;
+    grid-template-columns:repeat(3, 33%);
+    grid-template-rows:540px 580px;
     gap: 1rem;
+    padding:0rem;
+    margin:0rem;
+    align-items:center;
+  }
+    .imagenes{
+      padding-left: 4rem;
+    }
+    .remera{
+    background-color:#ECECDE;
+    align-items:center;
+  }
+    .fotos{
+    width:35rem;
+    height:35rem;
+  }
+    .image{
+    width:45rem;
+    height: 25rem;
+    border-radius:8%;
+    gap:1rem;
+  }
+    .barnav{
+    display:flex;
+    flex-direction:row;
+    gap: 2rem;
+  }
+    .barnav li a{
+      font-size: 2.4rem;
+    }
+    .barnav ul{
+      gap: 105rem;
+    }
+  
+    .tienda{
+    text-align:center;
+    align-items:center;
+  }
+    .tienda div{
+      display: flex;
+      gap: 3rem;
+      text-align: center;
+      padding-left: 50rem;
+    }
+  
+    .boton{
+    height: 2rem;
+    width:20rem;
+    border-radius:10%;
+    background-color:#74C3EF;
+    text-decoration:none;
+    gap: 3rem;
+    text-align: center;
+  }
+    .iconos{
+    width:5rem;
+    height:5rem;
+    gap:5rem;
+  }
+    .card-1{
+    display:flex;
+    justify-content:space-evenly;
+    gap:2rem;
+    padding-bottom: 3rem;
+  }
+  
+    .classic{
+    text-align:center;
+    width:40rem;
+    height:25rem;
+    background-color:#DCF256;
+    border-radius:10%;
+    position:relative;
+  }
+    .classic p{
+    font-size:3rem;
+    text-align: center;
+  }
+    .flecha{
+    width:20rem;
+    height:35rem;
+    position:absolute;
+    left:45%;
+    bottom:1%;
+    top:25%;
+  }
+    .valor{
+    width:22rem;
+    height:4rem;
+    background-color:#ECECDE;
+    position: absolute;
+    left:22.5%;
+    top:65%;
+    bottom:1%;
+  }
+  
+    .card2{
+    display:flex;
+    justify-content:space-evenly;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+    .standar{
+    text-align:center;
+    width:42rem;
+    height:25rem;
+    background-color:#A0CBA2;
+    border-radius:10%;
+    position:relative;
+  }
+  
+    .standar p{
+    font-size:3rem;
+    text-align:center;
+  }
+    .flecha-2{
+    width:20rem;
+    height:35rem;
+    position:absolute;
+    left:42%;
+    top:59%;
+  }
+    .valor-2{
+    width:22rem;
+    height:4rem;
+    background-color:#A0CBA2;
+    position:absolute;
+    left:22%;
+    top:65%;
+    bottom:1%;
+  }
+    .exclusive{
+    text-align:center;
+    width:42rem;
+    height:25rem;
+    background-color:#3B73A8;
+    border-radius:10%;
+    position:relative;
+  }
+    .exclusive p{
+    font-size:3rem;
+    text-align:center;
+    color:white;
+  }
+    .flecha-3{
+    width:20rem;
+    height:35rem;
+    position:absolute;
+    left:43%;
+    top:98%;
+  }
+    .valor-3{
+    width:22rem;
+    height:4rem;
+    background-color:#1e1d6e;
+    position:absolute;
+    left:22%;
+    top:65%;
+    bottom:1%;
+  }	
+    .div-1{
+    display:flex;
+    gap:5rem;
+    padding-left: 2rem;
+    text-decoration: none;
+    padding-top: 10rem;
+  }
+    .div-2{
+    display: flex;
+    gap: 2rem;
     align-items: center;
-    grid-template-rows: 350px 450px;
-    margin: 1rem;
-    padding: 1rem;
+    padding-left: 59rem;
   }
-  .remera{
-    width: 80%;
+    .footer{
+    background-color: #74C3EF;
   }
-  .imagenes{
-    width: 100%;
-    align-items: center;
+    .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    padding:1rem;
+  }
+    .texto_redes{
+    text-align:center;
+    padding-left: 48rem;
   }
 }
-@media(max-width: 425px){/* Mobile L*/
 
-}
-@media(max-width: 375px){/*Mobile M*/
 
-}
-@media(max-width: 320px){/*Mobile S*/
+      /* Tablet*/
+@media (max-width: 768px ){    
 
 }
 
+      /* Mobile L*/
+@media(max-width: 425px){
 
+}
 
+      /*Mobile M*/
+@media(max-width: 375px){
 
+}
 
+     /*Mobile S*/
+@media(max-width: 320px){
 
-
+}
 
 /*medidas de los mq
 4k = 2560 px
